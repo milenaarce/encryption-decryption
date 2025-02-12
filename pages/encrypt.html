@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiffrer un message</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="text/javascript" src="../script/script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Chiffrer</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="info.html">Infos</a>
+            <a href="encrypt.html">Chiffrer</a>
+            <a href="decrypt.html">Déchiffrer</a>
+            <a href="history.html">Historique</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Chiffrer un message</h2>
+        <form id="encrypt-form">
+            <label for="algorithme">Choisissez un algorithme: </label>
+            <select id="algorithme" name="algorithme">
+                <option value="">--Veuillez choisir une option--</option>
+                <option value="cesar">César</option>
+                <option value="vigenere">Vigenère</option>
+                <option value="xor">XOR</option>
+            </select>
+
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" type="text" placeholder="Entrez votre message à chiffrer ici..." required></textarea>
+
+            <label for="cle">Clé: </label>
+            <input id="cle" name="cle" type="text" placeholder="Entrez votre clé ici..." required> <br/>
+            
+            <button type="submit">Chiffrer</button>
+        </form>
+
+        <div id="resultat"></div>
+    </main>
+
+</body>
+</html>

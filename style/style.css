@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3C677;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #BA5624;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main > *{
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 7em;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select{
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button {
+    width: 20%;
+    padding: 7px;
+    margin-top: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #BA5624;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    font-size: 100%;
+    border: 2px solid black;
+    width: 21%;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 3em;
+    text-align: center;
+}
+
+th, td {
+    border:1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+table th {
+    background: #BA5624;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.container-table {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: left;
+}
+

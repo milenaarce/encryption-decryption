@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infos</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="text/javascript" src="../script/script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Infos</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="info.html">Infos</a>
+            <a href="encrypt.html">Chiffrer</a>
+            <a href="decrypt.html">Déchiffrer</a>
+            <a href="history.html">Historique</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Comment fonctionnent les algorithmes ?</h2>
+    
+        <section>
+            <h3>César</h3>
+            <p>Le chiffrement de César est une méthode de substitution simple qui consiste à décaler chaque lettre du message d’un certain nombre de positions dans l’alphabet, déterminé par une clé. Par exemple, avec une clé de 3, la lettre "A" devient "D", "B" devient "E", et ainsi de suite. Ce décalage est circulaire, ce qui signifie que "Z" revient à "C". Bien que facile à comprendre, ce chiffrement est vulnérable aux attaques par force brute.</p>
+            <ul>
+                <li>Type : Substitution par décalage</li>
+                <li>Avantages : Simple à implémenter</li>
+                <li>Inconvénients : Peu sécurisé face aux attaques modernes</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h3>Vigenère</h3>
+            <p>Le chiffrement de Vigenère est une amélioration du chiffrement de César. Il utilise une clé composée de lettres pour appliquer des décalages différents à chaque lettre du message. La clé est répétée ou tronquée pour correspondre à la longueur du texte. Par exemple, avec le message "BONJOUR" et la clé "CLE", chaque lettre du message est décalée en fonction de la lettre correspondante de la clé. Cette technique rend le chiffrement plus complexe et résistant aux attaques par fréquence.</p>
+            <ul>
+                <li>Type : Substitution polyalphabétique</li>
+                <li>Avantages : Plus sûr que César</li>
+                <li>Inconvénients : La clé doit rester secrète et être mémorisée</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h3>XOR</h3>
+            <p>Le chiffrement XOR (OU exclusif) est basé sur une opération logique binaire. Chaque caractère du message est combiné avec un caractère de la clé en appliquant l’opération XOR (⊕) au niveau de leurs représentations binaires. Ce chiffrement est réversible : appliquer XOR une seconde fois avec la même clé redonne le texte original. Pour être sûr, la clé doit être au moins aussi longue que le message et aléatoire (comme dans le "one-time pad").</p>
+            <ul>
+                <li><strong>Type :</strong> Chiffrement binaire</li>
+                <li><strong>Avantages :</strong> Très sûr avec une clé aléatoire unique</li>
+                <li><strong>Inconvénients :</strong> La clé doit être aussi longue que le message pour une sécurité optimale</li>
+            </ul>
+        
+            <h4>Exemple de chiffrement XOR :</h4>
+            <p><strong>Message :</strong> A <br/>
+            <strong>Clé :</strong> K</p>
+            <p>Chaque caractère est converti en son code binaire ASCII :</p>
+            <ul>
+                <li>A = 65 (binaire : 01000001)</li>
+                <li>K = 75 (binaire : 01001011)</li>
+            </ul>
+            <p>Ensuite, appliquez l'opération XOR entre les deux :</p>
+            <pre>
+               01000001 (A)
+            ⊕ 01001011 (K)
+            -----------------
+               00001010 (résultat en binaire)
+            </pre>
+            <p>Le résultat binaire (00001010) correspond au caractère ASCII : <strong>10 (␊(line feed), saut de ligne)</strong>.</p>
+        
+            <h4>Déchiffrement :</h4>
+            <p>Appliquez XOR à nouveau avec la clé (K) :</p>
+            <pre>
+               00001010 (résultat précédent)
+            ⊕ 01001011 (K)
+            -----------------
+               01000001 (A, le message d'origine)
+            </pre>
+            <p>Le processus est réversible, et le message d'origine "A" est récupéré.</p>
+        </section>
+        
+    </main>    
+    
+</body>
+</html>
